@@ -1,0 +1,228 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Elisangela Silva
+* 
+* Title: Animado
+* Author: Elisangela Silva
+* Website: N/A
+* Twitter: @elisannsilva
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/animado/
+*/
+
+/* Adapted from Animado by Elisangela Silva with changes for U-M branding and the existing ELO HTML.
+   Source: stylestage-main.zip, src/styles/css/animado.css
+   Brand reference: https://brand.umich.edu/design-resources/colors/
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00274C;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+header > a {
+    position: absolute;
+    top: -10rem;
+    z-index: -1000;
+}
+header > a:focus {
+    top: 1rem;
+    z-index: 10;
+    padding: 1rem;
+    background: #FFCB05;
+    color: #00274C;
+}
+a { color: inherit; }
+p { margin: 0 0 1rem; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+main, aside, footer { padding: clamp(1rem, 4vw, 2rem); }
+
+header {
+    color: #FFFFFF;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    padding: 2rem 0;
+    background: #00274C;
+    border-top: 0.5rem solid #FFCB05;
+}
+header h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.2;
+    border: 3px solid #FFFFFF;
+    padding: 1rem;
+    margin: 2rem 1rem;
+    max-width: 24ch;
+}
+header p {
+    font-size: 1.25rem;
+    max-width: 65ch;
+    padding-inline: 1rem;
+}
+img { display: block; width: 100%; height: auto; }
+header > img { max-width: 76rem; }
+header > img:first-of-type {
+    width: 10rem;
+    margin: 1rem;
+    padding: 0.75rem;
+    background: #FFFFFF;
+}
+
+nav {
+    width: 100%;
+    padding: 0.5rem;
+    background: #00274C;
+    border-bottom: 3px solid #FFCB05;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li { margin: 0.25rem; }
+nav ul a {
+    display: inline-grid;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover, nav a:focus, nav a[aria-current="page"] {
+    background: #FFCB05;
+    color: #00274C;
+    border-bottom-color: #FFFFFF;
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    max-width: 80ch;
+    margin-inline: auto;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25ch), 1fr));
+    gap: 2rem;
+}
+main > section, main > img, main > aside { grid-column: 1 / -1; }
+main section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25ch), 1fr));
+    gap: 1.5rem;
+}
+main section > h2, main section > p, main section > ul,
+main section > img, main section > iframe { grid-column: 1 / -1; }
+main h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.4;
+    margin: 0.5rem 0;
+}
+main p, main ol { margin-block: 0 1rem; }
+
+article {
+    border: 3px solid #00274C;
+    border-left-color: #FFCB05;
+    border-right-color: #FFCB05;
+    padding: 1rem;
+    min-width: 0;
+}
+#main strong { color: #00274C; }
+main h3 {
+    color: #00274C;
+    line-height: 1.4;
+    margin: 0 0 0.65em;
+    font-size: 1.4rem;
+}
+ol { list-style-type: decimal; }
+main ul { list-style-type: disc; }
+main ul, main ol { padding-inline-start: 1.5rem; }
+main li { margin-bottom: 0.75rem; }
+main a { text-decoration: underline; }
+
+aside > div > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #FFCB05;
+    font-weight: bold;
+    color: #00274C;
+    padding: 1rem;
+}
+aside {
+    display: block;
+    border: 3px solid #FFCB05;
+    margin: 1rem 0;
+}
+aside > div { margin-block: 1rem; }
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: clamp(12rem, 45vw, 24rem);
+    border: 0;
+}
+
+/* Animado's centered footer and shared content measure. */
+footer {
+    width: 100%;
+    max-width: 80ch;
+    margin-inline: auto;
+    border-top: 3px solid #FFCB05;
+    text-align: center;
+}
+footer p:first-child { margin-top: 2rem; }
+footer address { font-style: normal; margin-block: 1rem; }
+footer a { color: #00274C; }
+a:hover { text-decoration: underline; }
+a:focus {
+    outline: 3px solid #00274C;
+    outline-offset: 3px;
+}
+
+.home-header {
+    min-height: 100vh;
+    padding: 0;
+    grid-template-rows: auto 1fr;
+}
+.home-hero {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 28rem;
+    background: linear-gradient(rgba(0, 39, 76, 0.8), rgba(0, 39, 76, 0.8)),
+        url('../images/MCOMMONS-Maize_Hour_North-18.jpg') center / cover;
+    padding: clamp(1rem, 4vw, 3rem);
+}
+.home-hero > img { display: none; }
+.home-hero h1 {
+    max-width: 100%;
+    margin: 0;
+    border: 0;
+}
+.hero-welcome {
+    display: block;
+    font-size: clamp(3rem, 11vw, 8rem);
+}
+.hero-subtitle {
+    display: block;
+    margin-top: 1rem;
+    font-size: clamp(1.125rem, 3vw, 2rem);
+    font-weight: normal;
+    line-height: 1.5;
+}
